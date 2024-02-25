@@ -3,10 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package cuentas;
-
+/**
+ *Esta clase simula el ingreso/retiro de una cantidad en una cuenta 
+ */
 
 public class Main {
-
+/**
+     * @param args
+ **/
     public static void main(String[] args) {
         CCuenta cuenta1;
         double saldoActual;
@@ -15,6 +19,10 @@ public class Main {
         saldoActual = cuenta1.estado();
         System.out.println("El saldo actual es"+ saldoActual );
 
+        operativa_cuenta(cuenta1, cuenta1);
+    }
+
+    public static void operativa_cuenta(CCuenta cuenta1, CCuenta cantidad) {
         try {
             cuenta1.retirar(2300);
         } catch (Exception e) {
@@ -28,3 +36,4 @@ public class Main {
         }
     }
 }
+
